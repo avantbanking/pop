@@ -216,8 +216,6 @@ extern NSString * const kPOPWindowBackgroundColor;
 
 #endif
 
-#if SCENEKIT_SDK_AVAILABLE
-
 /**
  Common SceneKit property names.
  */
@@ -249,4 +247,3 @@ extern NSString * const kPOPSCNNodeScaleY;
 extern NSString * const kPOPSCNNodeScaleZ;
 extern NSString * const kPOPSCNNodeScaleXY;
 
-#endif

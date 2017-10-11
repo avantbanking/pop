@@ -69,7 +69,6 @@
 #if TARGET_OS_IPHONE
 #import "POPDefines.h"
 
-#if SCENEKIT_SDK_AVAILABLE
 #import <SceneKit/SceneKit.h>
 
 /**
@@ -90,5 +89,4 @@
 }
 
 @end
-#endif
 #endif

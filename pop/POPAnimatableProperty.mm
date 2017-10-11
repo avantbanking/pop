@@ -127,8 +127,6 @@ NSString * const kPOPWindowBackgroundColor = @"window.backgroundColor";
 
 #endif
 
-#if SCENEKIT_SDK_AVAILABLE
-
 // SceneKit
 NSString * const kPOPSCNNodePosition = @"scnode.position";
 NSString * const kPOPSCNNodePositionX = @"scnnode.position.x";
@@ -157,8 +155,6 @@ NSString * const kPOPSCNNodeScaleX = @"scnnode.scale.x";
 NSString * const kPOPSCNNodeScaleY = @"scnnode.scale.y";
 NSString * const kPOPSCNNodeScaleZ = @"scnnode.scale.z";
 NSString * const kPOPSCNNodeScaleXY = @"scnnode.scale.xy";
-
-#endif
 
 /**
  State structure internal to static animatable property.
@@ -835,8 +831,6 @@ static POPStaticAnimatablePropertyState _staticStates[] =
 
 #endif
 
-#if SCENEKIT_SDK_AVAILABLE
-
   /* SceneKit */
 
   {kPOPSCNNodePosition,
@@ -1111,9 +1105,6 @@ static POPStaticAnimatablePropertyState _staticStates[] =
     },
     kPOPThresholdScale
   },
-
-#endif
-
 };
 #pragma clang diagnostic pop
 

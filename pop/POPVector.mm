@@ -253,7 +253,6 @@ namespace POP
     return new_vector(4, rgba);
   }
   
-#if SCENEKIT_SDK_AVAILABLE
   SCNVector3 Vector::scn_vector3() const
   {
     return _count < 3 ? SCNVector3Make(0.0, 0.0, 0.0) : SCNVector3Make(_values[0], _values[1], _values[2]);
@@ -282,7 +281,6 @@ namespace POP
     v->_values[3] = vec4.w;
     return v;
   }
-#endif
 
   void Vector::subRound(CGFloat sub)
   {
