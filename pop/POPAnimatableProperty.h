@@ -246,4 +246,5 @@ extern NSString * const kPOPSCNNodeScaleX;
 extern NSString * const kPOPSCNNodeScaleY;
 extern NSString * const kPOPSCNNodeScaleZ;
 extern NSString * const kPOPSCNNodeScaleXY;
+extern NSString * const kPOPSCNNodeOpacity;
 

@@ -155,6 +155,7 @@ NSString * const kPOPSCNNodeScaleX = @"scnnode.scale.x";
 NSString * const kPOPSCNNodeScaleY = @"scnnode.scale.y";
 NSString * const kPOPSCNNodeScaleZ = @"scnnode.scale.z";
 NSString * const kPOPSCNNodeScaleXY = @"scnnode.scale.xy";
+NSString * const kPOPSCNNodeScaleOpacity = @"scnnode.opacity";
 
 /**
  State structure internal to static animatable property.
@@ -1094,17 +1095,25 @@ static POPStaticAnimatablePropertyState _staticStates[] =
     },
     kPOPThresholdScale
   },
-
-  {kPOPSCNNodeScaleXY,
-    ^(SCNNode *obj, CGFloat values[]) {
-      values[0] = obj.scale.x;
-      values[1] = obj.scale.y;
+    {kPOPSCNNodeScaleXY,
+        ^(SCNNode *obj, CGFloat values[]) {
+            values[0] = obj.scale.x;
+            values[1] = obj.scale.y;
+        },
+        ^(SCNNode *obj, const CGFloat values[]) {
+            obj.scale = SCNVector3Make(values[0], values[1], obj.scale.z);
+        },
+        kPOPThresholdScale
     },
-    ^(SCNNode *obj, const CGFloat values[]) {
-      obj.scale = SCNVector3Make(values[0], values[1], obj.scale.z);
+    {kPOPLayerOpacity,
+        ^(SCNNode *obj, CGFloat values[]) {
+            values[0] = obj.opacity;
+        },
+        ^(SCNNode *obj, const CGFloat values[]) {
+            obj.opacity = values[0];
+        },
+        kPOPThresholdOpacity
     },
-    kPOPThresholdScale
-  },
 };
 #pragma clang diagnostic pop
 
