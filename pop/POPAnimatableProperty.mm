@@ -1105,7 +1105,7 @@ static POPStaticAnimatablePropertyState _staticStates[] =
         },
         kPOPThresholdScale
     },
-    {kPOPLayerOpacity,
+    {kPOPSCNNodeOpacity,
         ^(SCNNode *obj, CGFloat values[]) {
             values[0] = obj.opacity;
         },
